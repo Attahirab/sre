@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Daily Quotes</title>
+<style>
+  body { font-family: Arial; background: linear-gradient(#222, #000); color: #fff; height: 100vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+  #quote { font-size: 28px; max-width: 600px; margin: 20px; }
+  button { padding: 15px 40px; font-size: 20px; background: #ff0; color: #000; border: none; border-radius: 50px; cursor: pointer; }
+</style>
+</head>
+<body>
+<div>
+  <h1>✨ Quote of the Moment</h1>
+  <div id="quote">"The only way to do great work is to love what you do."</div>
+  <button onclick="newQuote()">New Quote</button>
+</div>
+
+<script>
+const quotes = [
+  "The only way to do great work is to love what you do. – Steve Jobs",
+  "Stay hungry, stay foolish. – Steve Jobs",
+  "Everything you’ve ever wanted is sitting on the other side of fear. – George Addair",
+  "The future belongs to those who believe in the beauty of their dreams. – Eleanor Roosevelt",
+  "Code is like humor. When you have to explain it, it’s bad. – Cory House"
+];
+function newQuote() {
+  const random = quotes[Math.floor(Math.random() * quotes.length)];
+  document.getElementById('quote').textContent = `"${random}"`;
+}
+</script>
+</body>
+</html>
